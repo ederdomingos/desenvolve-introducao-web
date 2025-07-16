@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Pesquisa de Satisfação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .checkbox-label input {
+            margin-right: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pesquisa de Satisfação</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pesquisa</legend>
+
+            <label>Como você avalia nosso atendimento?</label>
+            <label><input type="radio" name="atendimento" value="excelente" required> Excelente</label>
+            <label><input type="radio" name="atendimento" value="bom"> Bom</label>
+            <label><input type="radio" name="atendimento" value="ruim"> Ruim</label>
+
+            <label>Você voltaria a fazer negócio conosco?</label>
+            <label><input type="radio" name="retorno" value="sim" required> Sim</label>
+            <label><input type="radio" name="retorno" value="nao"> Não</label>
+
+            <label for="recomendaria">Você recomendaria nossa empresa para outras pessoas?</label>
+            <select id="recomendaria" name="recomendaria" required>
+                <option value="">Selecione</option>
+                <option value="com certeza">Com certeza</option>
+                <option value="talvez">Talvez</option>
+                <option value="não recomendaria">Não recomendaria</option>
+            </select>
+        </fieldset>
+
+        <label class="checkbox-label">
+            <input type="checkbox" name="compartilhar" value="sim">
+            Autorizo o compartilhamento da minha resposta com terceiros.
+        </label>
+
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
